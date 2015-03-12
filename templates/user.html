@@ -1,0 +1,19 @@
+{% extends "base.html" %}
+{% block title %}Hello world!{% endblock %}
+{% block pageHeader %}
+<ol class="breadcrumb">
+<li><a href="/">Home</a></li>
+<li class="active">User ({{ name }})</li>
+</ol>
+{% endblock %}
+{% block pageBody %}
+<div class="jumbotron">
+{% if not name == ("Me" or "You") %}
+<h1>Hello, {{ name }}, you bitch</h1>
+{% else %}
+<h1>Hello, Bossman {{ name }}</h1>
+{% endif %}
+<p>You seem to be using {{ theAgent }}</p>
+<p><a class="btn btn-primary btn-lg" href="/" role="button">Home</a></p>
+</div>
+{% endblock %}

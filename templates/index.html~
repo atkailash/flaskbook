@@ -1,0 +1,9 @@
+{% extends "base.html" %}
+{% block title %}Premier{% endblock %}
+
+{% block pageHeader %}
+    <h1>Hello World!</h1>
+   {% endblock %}
+{% block pageBody %}
+  <h2>You are using {{ theAgent }}</h2>
+{% endblock %}

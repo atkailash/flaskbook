@@ -1,0 +1,12 @@
+{% extends "base.html" %}
+{% block title %}Hello world!{% endblock %}
+{% block pageHeader %}
+{% if not name == ("Me" or "You") %}
+<h1>Hello, {{ name }}, you bitch</h1>
+{% else %}
+<h1>Hello, Bossman {{ name }}</h1>
+{% endif %}
+{% endblock %}
+{% block pageBody %}
+<h2>You seem to be using {{ theAgent }}</h2>
+{% endblock %}

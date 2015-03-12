@@ -1,0 +1,24 @@
+from flask import Flask, request, render_template
+from flask.ext.bootstrap import Bootstrap
+from flask import send_from_directory
+import os
+
+app = Flask(__name__)
+bootstrap = Bootstrap(app)
+
+@app.route('/favicon.ico')
+def favicon():
+	return send_from_directory(os.path.join(app.root_path, 'static'), 
+				   'favicon.ico', mimetype='image/vnd.microsoft.icon')
+@app.route('/')
+def index():
+	theAgent = request.headers.get('User-Agent')
+	return render_template('index.html', theAgent=theAgent)
+
+@app.route('/user/<name>')
+def user(name):
+	theAgent = request.headers.get('User-Agent')
+	return render_template('user.html', name=name, theAgent=theAgent)
+
+if __name__ == '__main__':
+	app.run(debug=True,host="192.168.0.103")

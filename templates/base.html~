@@ -1,0 +1,64 @@
+{% extends "bootstrap/base.html" %}
+{% block styles %}
+{{ super() }}
+<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css"/>
+<link rel="stylesheet" media="screen" href="http://openfontlibrary.org/face/courier-code" rel="stylesheet" type="text/css"/>
+<style>
+.navbar {
+    font-family: 'CourierCodeRoman';
+    font-weight: roman;
+    font-style: normal;
+}
+#logoImg {
+    vertical-align: middle;
+    display: inline-block;
+ }
+#theCodestro {
+    vertical-align: sub;
+    font-size: 10px;
+}
+</style>
+{% endblock %}
+{% block navbar %}
+<div class="navbar navbar-static-top navbar-inverse" role="navigation">
+  <div class="container">
+    <div class="navbar-header">
+      <img src="{{ url_for('static', filename='logo01.svg') }}" width="24px" height="24px" id="logoImg"/>
+      <button type="button" class="navbar-toggle"
+	      data-toggle="collapse" data-target=".navbar-collapse">
+	<span class="sr-only">Toggle navigation</span>
+	<span class="icon-bar"></span>
+	<span class="icon-bar"></span>
+	<span class="icon-bar"></span>
+	</button>
+      <a class="navbar-brand" href="/"><span id="theCodestro">(the)</span>Codestro:</a>
+    </div>
+    <div class="navbar-collapse collapse">
+      <ul class="nav navbar-nav">
+	<li><a href="/">(<i class="fa fa-home"></i>)Home</a></li>
+	</ul>
+      <ul class="nav navbar-nav">
+	<li class="dropdown">
+	  <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+	    (<i class="fa fa-info"></i>)Products
+	    <b class="caret"></b>
+	  </a>
+	  <ul class="dropdown-menu">
+	    <li><a href="/encodem">Encode'm</a></li>
+	    <li><a href="/namebot">NameBot</a></li>
+	  </ul>
+	</li>
+      </ul>
+    </div>
+  </div>
+</div>
+{% endblock %}
+
+{% block content %}
+<div class="container">
+  <div class="page-header">
+    {% block pageHeader %}{% endblock %}
+  </div>
+  {% block pageBody %}{% endblock %}
+</div>
+{% endblock %}
