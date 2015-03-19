@@ -43,16 +43,17 @@ def lib_listreader():
         return render_template('lib_listreader.html')
 
 @app.route('/products/libraries/propertiesfoo')
-def lib_listreader():
-        return render_template('lib_propertiesfoo')
+def lib_propertiesfoo():
+        return render_template('lib_propertiesfoo.html')
 
 @app.route('/about')
 def about():
-        return render_template('about')
+        return render_template('about.html')
 
 @app.route('/about/licenses')
 def licenses():
-        return render_template('abt_licenses')
+        return render_template('abt_licenses.html')
+
 if __name__ == '__main__':
 #	app.run(debug=True,host="192.168.0.103", port=2184)
         app.run(debug=True)
