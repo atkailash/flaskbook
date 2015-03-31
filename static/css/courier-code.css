@@ -1,0 +1,24 @@
+@font-face {
+    font-family: 'CourierCodeBold';
+        src: url('/static/courier-code/CourierCodeBold.ttf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+      }
+@font-face {
+    font-family: 'CourierCodeBoldItalic';
+        src: url('/static/courier-code/CourierCodeBoldItalic.ttf') format('truetype');
+    font-weight: bold;
+    font-style: italic;
+      }
+@font-face {
+    font-family: 'CourierCodeItalic';
+        src: url('/static/courier-code/CourierCodeItalic.ttf') format('truetype');
+    font-weight: normal;
+    font-style: italic;
+      }
+@font-face {
+    font-family: 'CourierCodeRoman';
+        src: url('/static/courier-code/CourierCodeRoman.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+      }
